@@ -25,6 +25,7 @@ for dir in artwork cfg frontend hi inp memcard nvram roms samples snap folders; 
     mkdir -p "${DESTDIR}/${dir}"
     echo "Placeholder for ${dir} directory" >"${DESTDIR}/${dir}/dir.txt"
 done
+cp -a roms/* "${DESTDIR}/roms/"
 
 # Strip the binary
 armv7a-cros-linux-gnueabi-strip "${DESTDIR}/mame"
